@@ -1,0 +1,733 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "addresses": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "countryCode": {
+              "type": "string"
+            },
+            "extendedAddress": {
+              "type": "string"
+            },
+            "poBox": {
+              "type": "string"
+            },
+            "postalCode": {
+              "type": "string"
+            },
+            "region": {
+              "type": "string"
+            },
+            "streetAddress": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "country",
+            "countryCode",
+            "extendedAddress",
+            "poBox",
+            "postalCode",
+            "region",
+            "streetAddress",
+            "type"
+          ]
+        }
+      ]
+    },
+    "ageRanges": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "ageRange": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ageRange"
+          ]
+        }
+      ]
+    },
+    "biographies": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "contentType": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "contentType",
+            "value"
+          ]
+        }
+      ]
+    },
+    "birthdays": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "object",
+              "properties": {
+                "day": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "day",
+                "month",
+                "year"
+              ]
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "text"
+          ]
+        }
+      ]
+    },
+    "clientData": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "key",
+            "value"
+          ]
+        }
+      ]
+    },
+    "coverPhotos": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "boolean"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "default",
+            "url"
+          ]
+        }
+      ]
+    },
+    "emailAddresses": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "displayName": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "displayName",
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "events": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "object",
+              "properties": {
+                "day": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "day",
+                "month",
+                "year"
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "type"
+          ]
+        }
+      ]
+    },
+    "externalIds": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "fileAses": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value"
+          ]
+        }
+      ]
+    },
+    "genders": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "addressMeAs": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "addressMeAs",
+            "value"
+          ]
+        }
+      ]
+    },
+    "imClients": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "protocol": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "username": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "protocol",
+            "type",
+            "username"
+          ]
+        }
+      ]
+    },
+    "interests": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value"
+          ]
+        }
+      ]
+    },
+    "locales": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value"
+          ]
+        }
+      ]
+    },
+    "locations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "buildingId": {
+              "type": "string"
+            },
+            "current": {
+              "type": "boolean"
+            },
+            "deskCode": {
+              "type": "string"
+            },
+            "floor": {
+              "type": "string"
+            },
+            "floorSection": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "buildingId",
+            "current",
+            "deskCode",
+            "floor",
+            "floorSection",
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "miscKeywords": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "names": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "familyName": {
+              "type": "string"
+            },
+            "givenName": {
+              "type": "string"
+            },
+            "honorificPrefix": {
+              "type": "string"
+            },
+            "honorificSuffix": {
+              "type": "string"
+            },
+            "middleName": {
+              "type": "string"
+            },
+            "phoneticFamilyName": {
+              "type": "string"
+            },
+            "phoneticFullName": {
+              "type": "string"
+            },
+            "phoneticGivenName": {
+              "type": "string"
+            },
+            "phoneticHonorificPrefix": {
+              "type": "string"
+            },
+            "phoneticHonorificSuffix": {
+              "type": "string"
+            },
+            "phoneticMiddleName": {
+              "type": "string"
+            },
+            "unstructuredName": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "familyName",
+            "givenName",
+            "honorificPrefix",
+            "honorificSuffix",
+            "middleName",
+            "phoneticFamilyName",
+            "phoneticFullName",
+            "phoneticGivenName",
+            "phoneticHonorificPrefix",
+            "phoneticHonorificSuffix",
+            "phoneticMiddleName",
+            "unstructuredName"
+          ]
+        }
+      ]
+    },
+    "nicknames": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "occupations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value"
+          ]
+        }
+      ]
+    },
+    "organizations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "costCenter": {
+              "type": "string"
+            },
+            "current": {
+              "type": "boolean"
+            },
+            "department": {
+              "type": "string"
+            },
+            "domain": {
+              "type": "string"
+            },
+            "endDate": {
+              "type": "object",
+              "properties": {
+                "day": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "day",
+                "month",
+                "year"
+              ]
+            },
+            "fullTimeEquivalentMillipercent": {
+              "type": "integer"
+            },
+            "jobDescription": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "phoneticName": {
+              "type": "string"
+            },
+            "startDate": {
+              "type": "object",
+              "properties": {
+                "day": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "day",
+                "month",
+                "year"
+              ]
+            },
+            "symbol": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "costCenter",
+            "current",
+            "department",
+            "domain",
+            "endDate",
+            "fullTimeEquivalentMillipercent",
+            "jobDescription",
+            "location",
+            "name",
+            "phoneticName",
+            "startDate",
+            "symbol",
+            "title",
+            "type"
+          ]
+        }
+      ]
+    },
+    "phoneNumbers": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "photos": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "boolean"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "default",
+            "url"
+          ]
+        }
+      ]
+    },
+    "relations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "person",
+            "type"
+          ]
+        }
+      ]
+    },
+    "sipAddresses": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value"
+          ]
+        }
+      ]
+    },
+    "urls": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        }
+      ]
+    },
+    "userDefined": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "key",
+            "value"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "names",
+  ]
+}

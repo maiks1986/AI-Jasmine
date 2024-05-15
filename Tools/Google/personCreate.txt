@@ -1,0 +1,208 @@
+{ # Information about a person merged from various data sources such as the authenticated user's contacts and profile data. Most fields can have multiple items. The items in a field have no guaranteed order, but each non-empty field is guaranteed to have exactly one field with `metadata.primary` set to true.
+  "addresses": [ # The person's street addresses.
+    { # A person's physical address. May be a P.O. box or street address. All fields are optional.
+      "city": "A String", # The city of the address.
+      "country": "A String", # The country of the address.
+      "countryCode": "A String", # The [ISO 3166-1 alpha-2](http://www.iso.org/iso/country_codes.htm) country code of the address.
+      "extendedAddress": "A String", # The extended address of the address; for example, the apartment number.
+      "poBox": "A String", # The P.O. box of the address.
+      "postalCode": "A String", # The postal code of the address.
+      "region": "A String", # The region of the address; for example, the state or province.
+      "streetAddress": "A String", # The street address.
+      "type": "A String", # The type of the address. The type can be custom or one of these predefined values: * `home` * `work` * `other`
+    },
+  ],
+  "ageRanges": [ # Output only. The person's age ranges.
+    { # A person's age range.
+      "ageRange": "A String", # The age range.
+    },
+  ],
+  "biographies": [ # The person's biographies. This field is a singleton for contact sources.
+    { # A person's short biography.
+      "contentType": "A String", # The content type of the biography.,
+      "value": "A String", # The short biography.
+    },
+  ],
+  "birthdays": [ # The person's birthdays. This field is a singleton for contact sources.
+    { # A person's birthday. At least one of the `date` and `text` fields are specified. The `date` and `text` fields typically represent the same date, but are not guaranteed to. Clients should always set the `date` field when mutating birthdays.
+      "date": { # Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp # The structured date of the birthday.
+        "day": 0, # Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+        "month": 0, # Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+        "year": 0, # Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+      },
+      "text": "A String", # Prefer to use the `date` field if set. A free-form string representing the user's birthday. This value is not validated.
+    },
+  ],
+  "clientData": [ # The person's client data.
+    { # Arbitrary client data that is populated by clients. Duplicate keys and values are allowed.
+      "key": "A String", # The client specified key of the client data.
+      "value": "A String", # The client specified value of the client data.
+    },
+  ],
+  "coverPhotos": [ # Output only. The person's cover photos.
+    { # A person's cover photo. A large image shown on the person's profile page that represents who they are or what they care about.
+      "default": True or False, # True if the cover photo is the default cover photo; false if the cover photo is a user-provided cover photo.,
+      "url": "A String", # The URL of the cover photo.
+    },
+  ],
+  "emailAddresses": [ # The person's email addresses. For `people.connections.list` and `otherContacts.list` the number of email addresses is limited to 100. If a Person has more email addresses the entire set can be obtained by calling GetPeople.
+    { # A person's email address.
+      "displayName": "A String", # The display name of the email.
+      "type": "A String", # The type of the email address. The type can be custom or one of these predefined values: * `home` * `work` * `other`
+      "value": "A String", # The email address.
+    },
+  ],
+  "events": [ # The person's events.
+    { # An event related to the person.
+      "date": { # Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp # The date of the event.
+        "day": 0, # Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+        "month": 0, # Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+        "year": 0, # Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+      },
+      "type": "A String", # The type of the event. The type can be custom or one of these predefined values: * `anniversary` * `other`
+    },
+  ],
+  "externalIds": [ # The person's external IDs.
+    { # An identifier from an external entity related to the person.
+      "type": "A String", # The type of the external ID. The type can be custom or one of these predefined values: * `account` * `customer` * `loginId` * `network` * `organization`
+      "value": "A String", # The value of the external ID.
+    },
+  ],
+  "fileAses": [ # The person's file-ases.
+    { # The name that should be used to sort the person in a list.
+      "value": "A String", # The file-as value
+    },
+  ],
+  "genders": [ # The person's genders. This field is a singleton for contact sources.
+    { # A person's gender.
+      "addressMeAs": "A String", # Free form text field for pronouns that should be used to address the person. Common values are: * `he`/`him` * `she`/`her` * `they`/`them`
+      "value": "A String", # The gender for the person. The gender can be custom or one of these predefined values: * `male` * `female` * `unspecified`
+    },
+  ],
+  "imClients": [ # The person's instant messaging clients.
+    { # A person's instant messaging client.
+      "protocol": "A String", # The protocol of the IM client. The protocol can be custom or one of these predefined values: * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
+      "type": "A String", # The type of the IM client. The type can be custom or one of these predefined values: * `home` * `work` * `other`
+      "username": "A String", # The user name used in the IM client.
+    },
+  ],
+  "interests": [ # The person's interests.
+    { # One of the person's interests.
+      "value": "A String", # The interest; for example, `stargazing`.
+    },
+  ],
+  "locales": [ # The person's locale preferences.
+    { # A person's locale preference.
+      "value": "A String", # The well-formed [IETF BCP 47](https://tools.ietf.org/html/bcp47) language tag representing the locale.
+    },
+  ],
+  "locations": [ # The person's locations.
+    { # A person's location.
+      "buildingId": "A String", # The building identifier.
+      "current": True or False, # Whether the location is the current location.
+      "deskCode": "A String", # The individual desk location.
+      "floor": "A String", # The floor name or number.
+      "floorSection": "A String", # The floor section in `floor_name`.
+      "type": "A String", # The type of the location. The type can be custom or one of these predefined values: * `desk` * `grewUp`
+      "value": "A String", # The free-form value of the location.
+    },
+  ],
+  "miscKeywords": [ # The person's miscellaneous keywords.
+    { # A person's miscellaneous keyword.
+      "type": "A String", # The miscellaneous keyword type.
+      "value": "A String", # The value of the miscellaneous keyword.
+    },
+  ],
+  "names": [ # The person's names. This field is a singleton for contact sources.
+    { # A person's name. If the name is a mononym, the family name is empty.
+      "familyName": "A String", # The family name.
+      "givenName": "A String", # The given name.
+      "honorificPrefix": "A String", # The honorific prefixes, such as `Mrs.` or `Dr.`
+      "honorificSuffix": "A String", # The honorific suffixes, such as `Jr.`
+      "middleName": "A String", # The middle name(s).
+      "phoneticFamilyName": "A String", # The family name spelled as it sounds.
+      "phoneticFullName": "A String", # The full name spelled as it sounds.
+      "phoneticGivenName": "A String", # The given name spelled as it sounds.
+      "phoneticHonorificPrefix": "A String", # The honorific prefixes spelled as they sound.
+      "phoneticHonorificSuffix": "A String", # The honorific suffixes spelled as they sound.
+      "phoneticMiddleName": "A String", # The middle name(s) spelled as they sound.
+      "unstructuredName": "A String", # The free form name value.
+    },
+  ],
+  "nicknames": [ # The person's nicknames.
+    { # A person's nickname.
+      "type": "A String", # The type of the nickname.
+      "value": "A String", # The nickname.
+    },
+  ],
+  "occupations": [ # The person's occupations.
+    { # A person's occupation.
+      "value": "A String", # The occupation; for example, `carpenter`.
+    },
+  ],
+  "organizations": [ # The person's past or current organizations.
+    { # A person's past or current organization. Overlapping date ranges are permitted.
+      "costCenter": "A String", # The person's cost center at the organization.
+      "current": True or False, # True if the organization is the person's current organization; false if the organization is a past organization.
+      "department": "A String", # The person's department at the organization.
+      "domain": "A String", # The domain name associated with the organization; for example, `google.com`.
+      "endDate": { # Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp # The end date when the person left the organization.
+        "day": 42, # Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+        "month": 42, # Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+        "year": 42, # Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+      },
+      "fullTimeEquivalentMillipercent": 42, # The person's full-time equivalent millipercent within the organization (100000 = 100%).
+      "jobDescription": "A String", # The person's job description at the organization.
+      "location": "A String", # The location of the organization office the person works at.
+      "name": "A String", # The name of the organization.
+      "phoneticName": "A String", # The phonetic name of the organization.
+      "startDate": { # Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values. * A month and day, with a zero year (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp # The start date when the person joined the organization.
+        "day": 42, # Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+        "month": 42, # Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+        "year": 42, # Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+      },
+      "symbol": "A String", # The symbol associated with the organization; for example, a stock ticker symbol, abbreviation, or acronym.
+      "title": "A String", # The person's job title at the organization.
+      "type": "A String", # The type of the organization. The type can be custom or one of these predefined values: * `work` * `school`
+    },
+  ],
+  "phoneNumbers": [ # The person's phone numbers. For `people.connections.list` and `otherContacts.list` the number of phone numbers is limited to 100. If a Person has more phone numbers the entire set can be obtained by calling GetPeople.
+    { # A person's phone number.
+      "type": "A String", # The type of the phone number. The type can be custom or one of these predefined values: * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` * `workPager` * `main` * `googleVoice` * `other`
+      "value": "A String", # The phone number.
+    },
+  ],
+  "photos": [ # Output only. The person's photos.
+    { # A person's photo. A picture shown next to the person's name to help others recognize the person.
+      "default": True or False, # True if the photo is a default photo; false if the photo is a user-provided photo.
+      "url": "A String", # The URL of the photo. You can change the desired size by appending a query parameter `sz={size}` at the end of the url, where {size} is the size in pixels. Example: https://lh3.googleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAAAAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50
+    },
+  ],
+  "relations": [ # The person's relations.
+    { # A person's relation to another person.
+      "person": "A String", # The name of the other person this relation refers to.
+      "type": "A String", # The person's relation to the other person. The type can be custom or one of these predefined values: * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend` * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
+    },
+  ],"sipAddresses": [ # The person's SIP addresses.
+    { # A person's SIP address. Session Initial Protocol addresses are used for VoIP communications to make voice or video calls over the internet.
+      "type": "A String", # The type of the SIP address. The type can be custom or or one of these predefined values: * `home` * `work` * `mobile` * `other`
+      "value": "A String", # The SIP address in the [RFC 3261 19.1](https://tools.ietf.org/html/rfc3261#section-19.1) SIP URI format.
+    },
+  ],
+  "skills": [ # The person's skills.
+    { # A skill that the person has.
+      "value": "A String", # The skill; for example, `underwater basket weaving`.
+    },
+  ],"urls": [ # The person's associated URLs.
+    { # A person's associated URLs.
+      "type": "A String", # The type of the URL. The type can be custom or one of these predefined values: * `home` * `work` * `blog` * `profile` * `homePage` * `ftp` * `reservations` * `appInstallPage`: website for a Currents application. * `other`
+      "value": "A String", # The URL.
+    },
+  ],
+  "userDefined": [ # The person's user defined data.
+    { # Arbitrary user data that is populated by the end users.
+      "key": "A String", # The end user specified key of the user defined data.
+      "value": "A String", # The end user specified value of the user defined data.
+    },
+  ],
+}

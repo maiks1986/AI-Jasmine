@@ -1,0 +1,208 @@
+{  
+  "addresses": [  
+    {  
+      "city": "A String",  
+      "country": "A String",  
+      "countryCode": "A String",  
+      "extendedAddress": "A String",  
+      "poBox": "A String",  
+      "postalCode": "A String",  
+      "region": "A String",  
+      "streetAddress": "A String",  
+      "type": "A String",  
+    },
+  ],
+  "ageRanges": [  
+    {  
+      "ageRange": "A String",  
+    },
+  ],
+  "biographies": [  
+    {  
+      "contentType": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "birthdays": [  
+    {  
+      "date": {  
+        "day": 0,  
+        "month": 0,  
+        "year": 0,  
+      },
+      "text": "A String",  
+    },
+  ],
+  "clientData": [  
+    {  
+      "key": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "coverPhotos": [  
+    {  
+      "default": True or False,  
+      "url": "A String",  
+    },
+  ],
+  "emailAddresses": [  
+    {  
+      "displayName": "A String",  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "events": [  
+    {  
+      "date": {  
+        "day": 0,  
+        "month": 0,  
+        "year": 0,  
+      },
+      "type": "A String",  
+    },
+  ],
+  "externalIds": [  
+    {  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "fileAses": [  
+    {  
+      "value": "A String",  
+    },
+  ],
+  "genders": [  
+    {  
+      "addressMeAs": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "imClients": [  
+    {  
+      "protocol": "A String",  
+      "type": "A String",  
+      "username": "A String",  
+    },
+  ],
+  "interests": [  
+    {  
+      "value": "A String",  
+    },
+  ],
+  "locales": [  
+    {  
+      "value": "A String",  
+    },
+  ],
+  "locations": [  
+    {  
+      "buildingId": "A String",  
+      "current": True or False,  
+      "deskCode": "A String",  
+      "floor": "A String",  
+      "floorSection": "A String",  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "miscKeywords": [  
+    {  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "names": [  
+    {  
+      "familyName": "A String",  
+      "givenName": "A String",  
+      "honorificPrefix": "A String",  
+      "honorificSuffix": "A String",  
+      "middleName": "A String",  
+      "phoneticFamilyName": "A String",  
+      "phoneticFullName": "A String",  
+      "phoneticGivenName": "A String",  
+      "phoneticHonorificPrefix": "A String",  
+      "phoneticHonorificSuffix": "A String",  
+      "phoneticMiddleName": "A String",  
+      "unstructuredName": "A String",  
+    },
+  ],
+  "nicknames": [  
+    {  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "occupations": [  
+    {  
+      "value": "A String",  
+    },
+  ],
+  "organizations": [  
+    {  
+      "costCenter": "A String",  
+      "current": True or False,  
+      "department": "A String",  
+      "domain": "A String",  
+      "endDate": {  
+        "day": 42,  
+        "month": 42,  
+        "year": 42,  
+      },
+      "fullTimeEquivalentMillipercent": 42,  
+      "jobDescription": "A String",  
+      "location": "A String",  
+      "name": "A String",  
+      "phoneticName": "A String",  
+      "startDate": {  
+        "day": 42,  
+        "month": 42,  
+        "year": 42,  
+      },
+      "symbol": "A String",  
+      "title": "A String",  
+      "type": "A String",  
+    },
+  ],
+  "phoneNumbers": [  
+    {  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "photos": [  
+    {  
+      "default": True or False,  
+      "url": "A String",  
+    },
+  ],
+  "relations": [  
+    {  
+      "person": "A String",  
+      "type": "A String",  
+    },
+  ],"sipAddresses": [  
+    {  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "skills": [  
+    {  
+      "value": "A String",  
+    },
+  ],"urls": [  
+    {  
+      "type": "A String",  
+      "value": "A String",  
+    },
+  ],
+  "userDefined": [  
+    {  
+      "key": "A String",  
+      "value": "A String",  
+    },
+  ],
+}
