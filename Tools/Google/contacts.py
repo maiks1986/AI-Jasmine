@@ -69,16 +69,6 @@ class GoogleContactsToolkit(GoogleToolkit):
             connections = results.get("connections", [])
 
             return connections
-            '''
-            for person in connections:
-            print(json.dumps(person, indent=1))
-            '''
-            '''
-            names = person.get("names", [])
-            if names:
-                name = names[0].get("displayName")
-                print(name)
-            '''
         except HttpError as err:
             print(err)
 
