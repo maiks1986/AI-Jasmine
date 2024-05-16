@@ -2,7 +2,6 @@ import speech_recognition as sr
 import os
 import time
 from dotenv import dotenv_values
-from modules.Modules import Modules
 from team import Team
 
 from Tools.basics import BasicsToolkit
@@ -22,7 +21,6 @@ class Jasmine:
     def __init__(self):
         self.log = Log()
         self.team = Team()
-        self.modules = Modules()
         self.env = dotenv_values(".env")
         self.r = sr.Recognizer()
         self.conversation_started = None
@@ -90,7 +88,7 @@ class Jasmine:
                     self.jasmin(user_response['transcription'])
                     self.debug(user_response['transcription'])
                 elif self.conversation_started != None and self.conversation_started + 60 >= time.time():
-                    self.send_to_interperter(user_response['transcription'])
+                    self.assistant.print_response(user_response['transcription'], markdown=False, stream=False)
                 else:
                     if user_response["error"] != None:
                         self.debug(user_response["error"])
