@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Address(BaseModel):
@@ -220,3 +220,7 @@ class ContactsModel(BaseModel):
     skills: Optional[List[Skill]] = None
     urls: Optional[List[Url]] = None
     userDefined: Optional[List[UserDefinedItem]] = None
+
+class BodyModel(BaseModel):
+    resourceName: Optional[str] = Field(...,description="The resource name for the person, assigned by the server. An ASCII string in the form of `people/{person_id}`. (only required for peoleUpdate)")
+    body: List[ContactsModel] = None
