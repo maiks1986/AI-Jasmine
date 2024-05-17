@@ -1,3 +1,5 @@
+
+![Jasmine3](https://github.com/maiks1986/AI-Jasmine/assets/57507698/87646d1b-dddb-4955-941b-11bbe4e6a136)
 # Jasmine - An AI Assistant for People with ABI and/or ADHD
 
 Jasmine is an innovative AI project designed to assist individuals living with Acquired Brain Injury (ABI) and Attention Deficit Hyperactivity Disorder (ADHD). Created by a developer who has both conditions, this tool utilizes Google APIs to help users manage their daily tasks efficiently. 
